@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akshay — Technical Explainer Videos</title>
+<meta name="description" content="60-second explainer videos for technical products. Made by a payments engineer.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://akshay-explains.netlify.app/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- The card a link shows when it's pasted into LinkedIn, WhatsApp or an email. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Akshay — Technical Explainer Videos">
+<meta property="og:title" content="60-second videos about how technical things work">
+<meta property="og:description" content="Explainer videos for technical products, made by a payments engineer in Bengaluru. Script first, full usage rights.">
+<meta property="og:url" content="https://akshay-explains.netlify.app/">
+<meta property="og:image" content="https://akshay-explains.netlify.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Akshay Kumar Singh — 60-second explainer videos">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+  // The theme you picked last time, set before the page is drawn so it never flashes.
+  try {
+    const t = localStorage.getItem('theme')
+    if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t
+  } catch {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme:light;
+    --bg:#fbfbfc; --surface:#fff; --surface-2:#f4f5f7; --line:#e2e4e9;
+    --ink:#1a1c22; --muted:#5b606b; --faint:#8d929d;
+    --accent:#0e5754; --on-accent:#fff;
+    --shadow:0 1px 2px rgba(20,22,28,.05),0 6px 16px rgba(20,22,28,.05);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      color-scheme:dark;
+      --bg:#0e1014; --surface:#16181d; --surface-2:#1c1f25; --line:#282b33;
+      --ink:#eceef2; --muted:#a0a5b0; --faint:#767c88;
+      --accent:#5fbdb4; --on-accent:#0e1014;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 16px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme:dark;
+    --bg:#0e1014; --surface:#16181d; --surface-2:#1c1f25; --line:#282b33;
+    --ink:#eceef2; --muted:#a0a5b0; --faint:#767c88;
+    --accent:#5fbdb4; --on-accent:#0e1014;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 16px rgba(0,0,0,.3);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+    font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{width:100%;max-width:64rem;margin-inline:auto;padding:48px 16px 80px}
+  @media(min-width:720px){.wrap{padding-inline:32px}}
+  h1,h2,h3{margin:0;text-wrap:balance}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--faint)}
+  header{position:relative;padding-right:52px}
+  .theme{position:absolute;top:-8px;right:0;width:38px;height:38px;display:grid;place-items:center;
+    border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--muted);
+    box-shadow:var(--shadow);cursor:pointer;transition:color .15s,border-color .15s}
+  .theme:hover{color:var(--ink);border-color:var(--faint)}
+  .theme:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .theme .sun{display:none}
+  :root[data-theme="dark"] .theme .sun{display:block}
+  :root[data-theme="dark"] .theme .moon{display:none}
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]) .theme .sun{display:block}
+    :root:not([data-theme="light"]) .theme .moon{display:none}
+  }
+  .nowrap{white-space:nowrap}
+  header h1{font-size:clamp(30px,6vw,44px);line-height:1.1;margin-top:10px;
+    letter-spacing:-.02em}
+  header p{color:var(--muted);max-width:56ch;margin:14px 0 0;font-size:16px}
+  section{margin-top:56px}
+  section>h2{font-size:20px;margin-bottom:6px}
+  section>.lead{color:var(--muted);font-size:14px;margin:0 0 22px;max-width:62ch}
+  .reels{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .reel{background:var(--surface);border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .reel video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;
+    background:#0e1014;cursor:pointer}
+  .reel .meta{padding:13px 15px 15px;border-top:1px solid var(--line)}
+  .reel h3{font-size:14.5px;font-weight:600}
+  .reel p{margin:5px 0 0;font-size:12.5px;color:var(--muted);line-height:1.5}
+  .reel{scroll-margin-top:24px}
+  .reel:target{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent),var(--shadow)}
+  .reel .tag{display:inline-block;margin-top:9px;font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--accent)}
+  .cards{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    padding:16px 18px}
+  .card h3{font-size:14px;font-weight:600;margin-bottom:5px}
+  .card p{margin:0;font-size:13px;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;font-size:14px;
+    background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    overflow:hidden}
+  th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.07em;
+    color:var(--faint);padding:11px 16px;border-bottom:1px solid var(--line)}
+  td{padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  td:first-child{font-weight:500;white-space:nowrap}
+  .price{font-family:"IBM Plex Mono",monospace;color:var(--accent);font-weight:500}
+  .contact{margin-top:56px;padding:24px;background:var(--surface-2);
+    border:1px solid var(--line);border-radius:12px}
+  .contact h2{font-size:18px}
+  .contact p{color:var(--muted);margin:8px 0 16px;font-size:14px}
+  .contact a{display:inline-block;background:var(--accent);color:var(--on-accent);
+    text-decoration:none;font-weight:500;font-size:14px;padding:11px 22px;
+    border-radius:8px}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:12.5px;color:var(--faint)}
+  @media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <button class="theme" type="button" aria-label="Switch to dark theme">
+      <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-2.93 1.41-1.41m11.32-11.32 1.41-1.41M2 12h2m16 0h2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41"/></svg>
+    </button>
+    <div class="eyebrow">Explainer video · Bengaluru</div>
+    <h1>I make <span class="nowrap">60-second</span> videos<br>about how technical things work.</h1>
+    <p>I'm a payments engineer. I spend my days building the systems most explainer
+      videos get wrong — so mine are made by someone who has actually shipped the
+      thing being explained. No face, no stock footage, no licensing risk.</p>
+  </header>
+
+  <section>
+    <h2>Work</h2>
+    <p class="lead">Made on spec, unprompted. Tap to play with sound.</p>
+    <div class="reels">
+
+      <article class="reel" id="duplicate-payments">
+        <video src="videos/duplicate-payments.mp4" poster="posters/duplicate-payments.jpg"
+               preload="none" controls playsinline></video>
+        <div class="meta">
+          <h3>Why a retry charges twice</h3>
+          <p>Idempotency keys, and the ordering mistake that defeats them.</p>
+          <span class="tag">Payments infrastructure</span>
+        </div>
+      </article>
+
+      <article class="reel" id="webhook-drops">
+        <video src="videos/webhook-drops.mp4" poster="posters/webhook-drops.jpg"
+               preload="none" controls playsinline></video>
+        <div class="meta">
+          <h3>Your webhooks are dropping events</h3>
+          <p>Three mistakes, and a test that finds them in ten minutes.</p>
+          <span class="tag">Developer tooling</span>
+        </div>
+      </article>
+
+      <article class="reel" id="refund-delay">
+        <video src="videos/refund-delay.mp4" poster="posters/refund-delay.jpg"
+               preload="none" controls playsinline></video>
+        <div class="meta">
+          <h3>Why refunds take 5–7 days</h3>
+          <p>Four parties, batch cycles, and who actually fronts an instant refund.</p>
+          <span class="tag">Consumer fintech</span>
+        </div>
+      </article>
+
+      <article class="reel" id="ai-forgets">
+        <video src="videos/ai-forgets.mp4" poster="posters/ai-forgets.jpg"
+               preload="none" controls playsinline></video>
+        <div class="meta">
+          <h3>Your AI assistant has no memory</h3>
+          <p>What a context window is, and why it contradicts itself.</p>
+          <span class="tag">AI &amp; developer tools</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>What you get</h2>
+    <div class="cards">
+      <div class="card"><h3>1080×1920 MP4</h3>
+        <p>Ready for Reels, Shorts and LinkedIn. Delivered as a file you own.</p></div>
+      <div class="card"><h3>Script first</h3>
+        <p>You approve the words before anything is recorded. No surprises at draft.</p></div>
+      <div class="card"><h3>Burned-in captions</h3>
+        <p>Word-level timing. Most of your audience watches on mute.</p></div>
+      <div class="card"><h3>Full usage rights</h3>
+        <p>Post it, run ads on it, cut it up. It's yours on final payment.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Rates</h2>
+    <p class="lead">Per finished 60-second video. Longer formats quoted on the brief.</p>
+    <table>
+      <tr><th>Item</th><th>Terms</th></tr>
+      <tr><td class="price">₹5,000</td>
+        <td>One video. Script, voiceover, motion graphics, captions.</td></tr>
+      <tr><td class="price">₹18,000</td>
+        <td>Four videos a month, booked as a retainer. Priority turnaround.</td></tr>
+      <tr><td>Payment</td><td>50% to start, 50% on delivery.</td></tr>
+      <tr><td>Turnaround</td><td>5 working days from an approved brief. Rush available at +50%.</td></tr>
+      <tr><td>Revisions</td><td>2 rounds included.</td></tr>
+    </table>
+  </section>
+
+  <div class="contact">
+    <h2>Want one for your product?</h2>
+    <p>Tell me the feature and who it's for. I'll send back a script outline
+      before anything gets recorded — free, and you keep it either way.</p>
+    <a href="mailto:akshaysing975@gmail.com?subject=Explainer%20video">Email me</a>
+  </div>
+
+  <footer>Akshay Kumar Singh · Bengaluru · payments engineer, 2 years ·
+    two published npm SDKs</footer>
+
+</div>
+<script>
+  // Light or dark: follows your device until you choose, then remembers the choice.
+  const toggle = document.querySelector('.theme')
+  const root = document.documentElement
+  const isDark = () => (root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches)
+  const label = () => toggle.setAttribute('aria-label', isDark() ? 'Switch to light theme' : 'Switch to dark theme')
+  toggle.addEventListener('click', () => {
+    const next = isDark() ? 'light' : 'dark'
+    root.dataset.theme = next
+    try {
+      localStorage.setItem('theme', next)
+    } catch {}
+    label()
+  })
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', label)
+  label()
+</script>
+</body>
+</html>

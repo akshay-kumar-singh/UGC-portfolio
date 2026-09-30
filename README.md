@@ -1,0 +1,18 @@
+# Technical explainer videos
+
+The one-page portfolio I send to brands: four sample 60-second explainers, what a
+client gets, and rates.
+
+**Live:** https://akshay-explains.netlify.app
+
+## Changing it
+
+Edit, commit, push. Netlify publishes every push to `main` within a minute. There is
+nothing to build; the site is these files as they are.
+
+- **A new video:** add `videos/<name>.mp4` and a 540×960 `posters/<name>.jpg`, then
+  copy one `<article class="reel" id="<name>">` block in `index.html`. The `id` is the
+  link that opens that video directly: `akshay-explains.netlify.app/#<name>`.
+- **The link preview** shown in LinkedIn, WhatsApp and email is `og.jpg` (1200×630).
+- **Light and dark:** the page follows the visitor's device; the button at the top
+  right switches it and remembers the choice.
