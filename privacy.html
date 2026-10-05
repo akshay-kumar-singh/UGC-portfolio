@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — Content Studio</title>
+<meta name="description" content="What Content Studio, Akshay Kumar Singh's publishing tool, can access, where it keeps it, and how to remove its access.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://akshay-explains.netlify.app/privacy.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>
+  // Same theme as the rest of the site, set before the page is drawn.
+  try {
+    const t = localStorage.getItem('theme')
+    if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t
+  } catch {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme:light;
+    --bg:#fbfbfc; --surface:#fff; --line:#e2e4e9;
+    --ink:#1a1c22; --muted:#5b606b; --faint:#8d929d; --accent:#0e5754;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      color-scheme:dark;
+      --bg:#0e1014; --surface:#16181d; --line:#282b33;
+      --ink:#eceef2; --muted:#a0a5b0; --faint:#767c88; --accent:#5fbdb4;
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme:dark;
+    --bg:#0e1014; --surface:#16181d; --line:#282b33;
+    --ink:#eceef2; --muted:#a0a5b0; --faint:#767c88; --accent:#5fbdb4;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+    font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{width:100%;max-width:44rem;margin-inline:auto;padding:48px 16px 80px}
+  @media(min-width:720px){.wrap{padding-inline:32px}}
+  a{color:var(--accent)}
+  .back{font-size:13px;text-decoration:none}
+  h1{font-size:clamp(28px,5vw,36px);line-height:1.15;margin:18px 0 0;text-wrap:balance}
+  .lede{color:var(--muted);margin:12px 0 0;font-size:16px}
+  .updated{color:var(--faint);font-size:13px;margin:8px 0 0}
+  h2{font-size:18px;margin:36px 0 8px}
+  p,li{color:var(--ink)}
+  ul{padding-left:20px;margin:8px 0}
+  li{margin:6px 0}
+  strong{font-weight:600}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:12.5px;color:var(--faint)}
+  footer a{color:inherit}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← Akshay Kumar Singh</a>
+  <h1>Privacy policy for Content Studio</h1>
+  <p class="lede">Content Studio is the tool Akshay Kumar Singh uses to publish his own
+    videos and send his own emails. This page says what it can access, where that is
+    kept, and how to take the access away.</p>
+  <p class="updated">Last updated 5 October 2026</p>
+
+  <h2>What Content Studio is</h2>
+  <p>A personal tool. It runs on Akshay's own computer and only he uses it: to post
+    videos to his own channels (After You Tap and Before You Merge, on YouTube,
+    Instagram and Facebook) and to send emails from his own Gmail. It is not offered
+    to anyone else, and nobody else signs in to it.</p>
+
+  <h2>What it can access</h2>
+  <p>When Akshay connects an account, the platform asks him to allow access, and the
+    tool uses it only for the following:</p>
+  <ul>
+    <li><strong>YouTube (Google):</strong> his channel's name and ID; uploading his
+      videos with their titles, descriptions and thumbnails; reading his own videos'
+      statistics and comments, and replying to those comments.</li>
+    <li><strong>Gmail (Google):</strong> sending the emails he writes and approves,
+      from his own address; reading the replies in conversations those emails started,
+      and bounce notices. It never opens any other email and never deletes anything.</li>
+    <li><strong>Instagram and Facebook (Meta):</strong> publishing his videos to his
+      own Instagram professional account and Facebook Page; reading their own
+      statistics and comments, and replying to those comments.</li>
+  </ul>
+
+  <h2>Where it is kept</h2>
+  <ul>
+    <li><strong>Sign-ins</strong> are kept in a file on Akshay's computer that only his
+      user account can read. They never go into a database and are never shared.</li>
+    <li><strong>Statistics, comments and email replies</strong> are kept in Akshay's
+      private database, only so the tool can show them to him.</li>
+  </ul>
+
+  <h2>Who it is shared with</h2>
+  <p>Nobody. Nothing is sold or used for advertising. The one exception is a feature
+    Akshay sees directly: when someone replies to one of his emails, the text of that
+    reply is sent to an AI service (Google Gemini or Mistral AI) to sort it and draft
+    an answer for him to review. It is sent only for that.</p>
+
+  <h2>Google user data</h2>
+  <p>Content Studio's use and transfer of information received from Google APIs
+    adheres to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+    API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>YouTube</h2>
+  <p>Content Studio uses YouTube API Services. Using it means agreeing to the
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's
+    privacy policy is at
+    <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+
+  <h2>Taking the access away</h2>
+  <p><strong>Disconnect</strong> in the tool deletes the stored sign-in straight away.
+    Access can also be removed at any time:</p>
+  <ul>
+    <li>Google: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a></li>
+    <li>Facebook and Instagram: Facebook <strong>Settings → Business integrations</strong></li>
+  </ul>
+
+  <h2>This website</h2>
+  <p>This site uses no cookies, no analytics and no tracking. It only remembers your
+    light or dark theme choice, in your own browser.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:akshayexplains.studio@gmail.com">akshayexplains.studio@gmail.com</a></p>
+
+  <footer>Akshay Kumar Singh · Bengaluru · <a href="./">akshay-explains.netlify.app</a></footer>
+</div>
+</body>
+</html>
