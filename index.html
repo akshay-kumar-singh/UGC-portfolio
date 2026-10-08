@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Akshay — Technical Explainer Videos</title>
-<meta name="description" content="60-second explainer videos for technical products. Made by a payments engineer.">
+<title>Akshay — Explainer Videos</title>
+<meta name="description" content="Short explainer videos that show how a product works. Made by a payments engineer who posts them daily on his own channels.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://akshay-explains.netlify.app/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <!-- The card a link shows when it's pasted into LinkedIn, WhatsApp or an email. -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Akshay — Technical Explainer Videos">
-<meta property="og:title" content="60-second videos about how technical things work">
-<meta property="og:description" content="Explainer videos for technical products, made by a payments engineer in Bengaluru. Script first, full usage rights.">
+<meta property="og:site_name" content="Akshay — Explainer Videos">
+<meta property="og:title" content="Short videos that explain how things work">
+<meta property="og:description" content="Explainer videos for apps, fintech, SaaS and developer tools, made by a payments engineer in Bengaluru. Script first, full usage rights.">
 <meta property="og:url" content="https://akshay-explains.netlify.app/">
 <meta property="og:image" content="https://akshay-explains.netlify.app/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Akshay Kumar Singh — 60-second explainer videos">
+<meta property="og:image:alt" content="Akshay Kumar Singh — short explainer videos">
 <meta name="twitter:card" content="summary_large_image">
 <script>
   // The theme you picked last time, set before the page is drawn so it never flashes.
@@ -82,7 +82,7 @@
   section{margin-top:56px}
   section>h2{font-size:20px;margin-bottom:6px}
   section>.lead{color:var(--muted);font-size:14px;margin:0 0 22px;max-width:62ch}
-  .reels{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .reels{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
   .reel{background:var(--surface);border:1px solid var(--line);border-radius:12px;
     overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
   .reel video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;
@@ -95,6 +95,11 @@
   .reel .tag{display:inline-block;margin-top:9px;font-family:"IBM Plex Mono",monospace;
     font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
     color:var(--accent)}
+  .reel .live{display:block;margin-top:7px;font-size:12px;color:var(--muted);text-decoration:none}
+  .reel .live:hover{color:var(--ink);text-decoration:underline}
+  .card .links{margin-top:10px;font-size:13px;display:flex;gap:14px}
+  .card .links a{color:var(--accent);text-decoration:none;font-weight:500}
+  .card .links a:hover{text-decoration:underline}
   .cards{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:10px;
     padding:16px 18px}
@@ -116,6 +121,8 @@
   .contact a{display:inline-block;background:var(--accent);color:var(--on-accent);
     text-decoration:none;font-weight:500;font-size:14px;padding:11px 22px;
     border-radius:8px}
+  .contact a.plain{background:none;color:var(--accent);padding:11px 6px;margin-left:10px}
+  .contact a.plain:hover{text-decoration:underline}
   footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
     font-size:12.5px;color:var(--faint)}
   footer a{color:inherit}
@@ -131,57 +138,83 @@
       <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-2.93 1.41-1.41m11.32-11.32 1.41-1.41M2 12h2m16 0h2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41"/></svg>
     </button>
     <div class="eyebrow">Explainer video · Bengaluru</div>
-    <h1>I make <span class="nowrap">60-second</span> videos<br>about how technical things work.</h1>
+    <h1>I make short videos<br>that explain how things work.</h1>
     <p>I'm a payments engineer. I spend my days building the systems most explainer
-      videos get wrong — so mine are made by someone who has actually shipped the
-      thing being explained. No face, no stock footage, no licensing risk.</p>
+      videos get wrong, so mine are made by someone who has actually shipped the
+      thing being explained. Apps, fintech, SaaS, developer tools: anything people
+      ask "how does that actually work?" about. No face, no stock footage, no
+      licensing risk.</p>
   </header>
 
   <section>
     <h2>Work</h2>
-    <p class="lead">Made on spec, unprompted. Tap to play with sound.</p>
+    <p class="lead">Videos from my own channels, made exactly the way I'd make yours. Tap to play with sound.</p>
     <div class="reels">
 
-      <article class="reel" id="duplicate-payments">
-        <video src="videos/duplicate-payments.mp4" poster="posters/duplicate-payments.jpg"
+      <article class="reel" id="upi-tap">
+        <video src="videos/upi-tap.mp4" poster="posters/upi-tap.jpg"
                preload="none" controls playsinline></video>
         <div class="meta">
-          <h3>Why a retry charges twice</h3>
-          <p>Idempotency keys, and the ordering mistake that defeats them.</p>
-          <span class="tag">Payments infrastructure</span>
-        </div>
-      </article>
-
-      <article class="reel" id="webhook-drops">
-        <video src="videos/webhook-drops.mp4" poster="posters/webhook-drops.jpg"
-               preload="none" controls playsinline></video>
-        <div class="meta">
-          <h3>Your webhooks are dropping events</h3>
-          <p>Three mistakes, and a test that finds them in ten minutes.</p>
-          <span class="tag">Developer tooling</span>
-        </div>
-      </article>
-
-      <article class="reel" id="refund-delay">
-        <video src="videos/refund-delay.mp4" poster="posters/refund-delay.jpg"
-               preload="none" controls playsinline></video>
-        <div class="meta">
-          <h3>Why refunds take 5–7 days</h3>
-          <p>Four parties, batch cycles, and who actually fronts an instant refund.</p>
+          <h3>What happens when you tap Pay on UPI</h3>
+          <p>No money moves at first: a request does. The app, NPCI and your bank, in 43 seconds.</p>
           <span class="tag">Consumer fintech</span>
+          <a class="live" href="https://www.youtube.com/shorts/S7sc_3hz3tA" target="_blank" rel="noopener">Posted on @afteryoutap ↗</a>
         </div>
       </article>
 
-      <article class="reel" id="ai-forgets">
-        <video src="videos/ai-forgets.mp4" poster="posters/ai-forgets.jpg"
+      <article class="reel" id="closure">
+        <video src="videos/closure.mp4" poster="posters/closure.jpg"
                preload="none" controls playsinline></video>
         <div class="meta">
-          <h3>Your AI assistant has no memory</h3>
-          <p>What a context window is, and why it contradicts itself.</p>
-          <span class="tag">AI &amp; developer tools</span>
+          <h3>What is a closure? Asked at Amazon</h3>
+          <p>A real interview question, answered in 37 seconds with one line of code.</p>
+          <span class="tag">Developer education</span>
+          <a class="live" href="https://www.youtube.com/shorts/MCctwGK4OL4" target="_blank" rel="noopener">Posted on @beforeyoumerge ↗</a>
         </div>
       </article>
 
+      <article class="reel" id="ai-interviewer">
+        <video src="videos/ai-interviewer.mp4" poster="posters/ai-interviewer.jpg"
+               preload="none" controls playsinline></video>
+        <div class="meta">
+          <h3>HackerRank's new AI interviewer</h3>
+          <p>A launch, explained: what it does, and what it changes for candidates.</p>
+          <span class="tag">AI &amp; HR tech</span>
+          <a class="live" href="https://www.youtube.com/@beforeyoumerge/shorts" target="_blank" rel="noopener">On @beforeyoumerge ↗</a>
+        </div>
+      </article>
+
+      <article class="reel" id="mule-accounts">
+        <video src="videos/mule-accounts.mp4" poster="posters/mule-accounts.jpg"
+               preload="none" controls playsinline></video>
+        <div class="meta">
+          <h3>Why renting out your bank account is a crime</h3>
+          <p>Fraud awareness: how mule accounts work, and the number to call.</p>
+          <span class="tag">Banking &amp; fraud awareness</span>
+          <a class="live" href="https://www.youtube.com/@afteryoutap/shorts" target="_blank" rel="noopener">On @afteryoutap ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Live on my channels</h2>
+    <p class="lead">Both channels started in October 2026 and post every day, written, voiced and
+      animated through the same process a client video goes through.</p>
+    <div class="cards">
+      <div class="card"><h3>After You Tap</h3>
+        <p>How money moves in India: UPI, cards, refunds and fraud.</p>
+        <div class="links">
+          <a href="https://www.youtube.com/@afteryoutap" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.instagram.com/afteryoutap" target="_blank" rel="noopener">Instagram</a>
+        </div></div>
+      <div class="card"><h3>Before You Merge</h3>
+        <p>AI news, tech concepts and interview questions, for developers anywhere.</p>
+        <div class="links">
+          <a href="https://www.youtube.com/@beforeyoumerge" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.instagram.com/beforeyoumerge" target="_blank" rel="noopener">Instagram</a>
+        </div></div>
     </div>
   </section>
 
@@ -201,7 +234,7 @@
 
   <section>
     <h2>Rates</h2>
-    <p class="lead">Per finished 60-second video. Longer formats quoted on the brief.</p>
+    <p class="lead">Per finished video, up to 60 seconds. Longer formats quoted on the brief.</p>
     <table>
       <tr><th>Item</th><th>Terms</th></tr>
       <tr><td class="price">₹5,000</td>
@@ -219,13 +252,19 @@
     <p>Tell me the feature and who it's for. I'll send back a script outline
       before anything gets recorded — free, and you keep it either way.</p>
     <a href="mailto:akshayexplains.studio@gmail.com?subject=Explainer%20video">Email me</a>
+    <a class="plain" href="https://www.linkedin.com/in/akshay-kumar-singh-39531324b" target="_blank" rel="noopener">or find me on LinkedIn ↗</a>
   </div>
 
-  <footer>Akshay Kumar Singh · Bengaluru · payments engineer, 2 years ·
+  <footer><a href="https://www.linkedin.com/in/akshay-kumar-singh-39531324b" target="_blank" rel="noopener">Akshay Kumar Singh</a> · Bengaluru · payments engineer, 2 years ·
     two published npm SDKs · <a href="privacy.html">Privacy</a></footer>
 
 </div>
 <script>
+  // Links sent before October 2026 pointed at the first four samples. They open the
+  // closest new one instead of the top of the page.
+  const moved = { 'duplicate-payments': 'upi-tap', 'refund-delay': 'upi-tap', 'webhook-drops': 'closure', 'ai-forgets': 'ai-interviewer' }
+  if (moved[location.hash.slice(1)]) location.replace('#' + moved[location.hash.slice(1)])
+
   // Light or dark: follows your device until you choose, then remembers the choice.
   const toggle = document.querySelector('.theme')
   const root = document.documentElement
